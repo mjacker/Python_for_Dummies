@@ -1,7 +1,8 @@
-from chapters import Chapter
+from menu import Menu
 
-ch = Chapter()
+ch = Menu()
 
 while ch.running:
     ch.choose0()
     ch.choose_reset()
+

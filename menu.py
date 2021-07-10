@@ -1,15 +1,21 @@
 import chapter1
+import resourses as rsc
+import pygame
 
-class Chapter():
+class Menu():
     def __init__(self) -> None:
         self.running = True
 
     """ Codigo del menu principal"""
     def menu(self) -> int:
         try:
+            print("""
+Welcome to Python for Dummies...
+--------------------------------------
+            """)
             op = int(input("""
-                1) Chapter 1 - Working with Numbers, Text, and Dates.
-                0) Exit.
+    1) Chapter 1 - Working with Numbers, Text, and Dates.
+    0) Exit.
                 \n"""))
         except:
             print("ERROR0")
@@ -18,6 +24,7 @@ class Chapter():
 
 
     def choose0(self):
+        rsc.clear()
         op = self.menu()
         if op == 1:
             self.choose1(self.menu1())
@@ -29,9 +36,10 @@ class Chapter():
     def menu1(self) -> int:
         try:
             op = int(input("""
-                1) Some Built-In Python Functions for Numbers
-                2) Math Module.
-                0) Back.
+    1) Some Built-In Python Functions for Numbers
+    2) Math Module.
+    3) Formatting Numbers
+    0) Back.
                 \n"""))
         except:
             print("ERROR1")
@@ -40,14 +48,19 @@ class Chapter():
     def choose1(self, op1):
         try:
             # op1 = self.menu1()
+            rsc.clear()
             if op1 == 1:
                 chapter1.ch1_1()
-                input("enter something to go back.")
             elif op1 == 2:
                 chapter1.ch1_2()
-                input("enter something to go back.")
+            elif op1 == 3:
+                chapter1.ch1_3()
+            elif op1 == 4:
+                chapter1.ch1_4()
             elif op1 == 0:
                 return 0
+
+            input("enter something to go back.")
 
             self.choose1(self.menu1())
         except:
