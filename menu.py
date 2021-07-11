@@ -16,7 +16,7 @@ Welcome to Python for Dummies...
             op = int(input("""
     1) Chapter 1 - Working with Numbers, Text, and Dates.
     0) Exit.
-                \n"""))
+                \n\t>> """))
         except:
             print("ERROR0")
 
@@ -24,7 +24,7 @@ Welcome to Python for Dummies...
 
 
     def choose0(self):
-        rsc.clear()
+        # rsc.clear()
         op = self.menu()
         if op == 1:
             self.choose1(self.menu1())
@@ -39,8 +39,11 @@ Welcome to Python for Dummies...
     1) Some Built-In Python Functions for Numbers
     2) Math Module.
     3) Formatting Numbers
+    4) Formatting perfecnt numbers
+    5) Making multiline format strings
+    6) Formatting width and alignment
     0) Back.
-                \n"""))
+                \n\t>> """))
         except:
             print("ERROR1")
         return op
@@ -57,10 +60,14 @@ Welcome to Python for Dummies...
                 chapter1.ch1_3()
             elif op1 == 4:
                 chapter1.ch1_4()
+            elif op1 == 5:
+                chapter1.ch1_5()
+            elif op1 == 6:
+                chapter1.ch1_6()
             elif op1 == 0:
                 return 0
 
-            input("enter something to go back.")
+            input("\n\n\tpress any key to go back...")
 
             self.choose1(self.menu1())
         except:

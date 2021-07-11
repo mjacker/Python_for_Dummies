@@ -67,8 +67,9 @@ def ch1_4():
     sales_tax_rate = 0.065
     print(f"Sales Tax Rate {sales_tax_rate:.2%}")
 
-    print("\n Example 2:")
 
+# Making multiline format strings
+def ch1_5():
     unit_price = 49.95
     quantity = 32
     sales_tax_rate = 0.065
@@ -80,9 +81,56 @@ def ch1_4():
     Sales Tax: ${sales_tax:,.2f}
     Total:     ${total:,.2f}
     """
+    print(output)
 
-    print(output
-    )
+# Formatting width and alignment
+# """ es cuando se usa por ejemplo :>20 """
+def ch1_6():
+    unit_price = 49.95
+    quantity = 32
+    sales_tax_rate = 0.065
+    subtotal = quantity * unit_price
+    sales_tax = sales_tax_rate * subtotal
+    total = subtotal + sales_tax
+    output = f"""
+    Subtotal:  ${subtotal:>9,.2f}
+    Sales Tax: ${sales_tax:>9,.2f}
+    Total:     ${total:,.2f}
+    """
+
+    print(output)
+
+    print("Para corregir de que el signo de dolar")
 
 
+    # Forat amounts to whos as string with Leading dollar sign
+    s_subtotal = "$" + f"{subtotal:.,2f}"
+    s_sales_tax = "$" + f"{sales_tax:.,2f}"
+    s_total = "$" + f"{total:.,2f}"
 
+    # Output the string with dollar sign already attached
+    output = f"""\n\n Output the string with dollar sign already attached
+    Subtotal:  ${s_subtotal:>9}
+    Sales Tax: ${s_sales_tax:>9}
+    Total:     ${s_total:}
+    """
+    x = int(input("press any key to continue..."))
+
+
+# Binary, octal, and hexadecimal numbers
+def ch1_7():
+    x = 255
+    print(bin(x))
+    print(oct(x))
+    print(hex(x))
+
+    print(0b11111111)
+    print(0o337)
+    print(0xff)
+
+
+# Complex number
+def ch1_8():
+    print("""complex(real, imaginary)""")
+    z = complex(2, -3)
+    print(z)
