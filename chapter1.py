@@ -134,3 +134,13 @@ def ch1_8():
     print("""complex(real, imaginary)""")
     z = complex(2, -3)
     print(z)
+
+# Complex number
+def ch1_9():
+    print("Manipulating Strings:")
+    print("Concatenating strings")
+    first_namem = "Alan"
+    middle_init = "C"
+    last_name = "Simpson"
+    full_name = first_namem + middle_init + last_name
+    print(full_name)

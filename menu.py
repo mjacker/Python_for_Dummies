@@ -42,6 +42,7 @@ Welcome to Python for Dummies...
     4) Formatting perfecnt numbers
     5) Making multiline format strings
     6) Formatting width and alignment
+    9) Concatenating strings
     0) Back.
                 \n\t>> """))
         except:
@@ -64,6 +65,8 @@ Welcome to Python for Dummies...
                 chapter1.ch1_5()
             elif op1 == 6:
                 chapter1.ch1_6()
+            elif op1 == 9:
+                chapter1.ch1_9()
             elif op1 == 0:
                 return 0
 
@@ -75,5 +78,3 @@ Welcome to Python for Dummies...
 
     def choose_reset(self):
         pass
-
-
