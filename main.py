@@ -1,7 +1,16 @@
+# from menu import Menu
+from opciones import Opciones
 from menu import Menu
 
-ch = Menu()
+# x = Menu()
+y = Opciones()
 
-while ch.running:
-    Menu.start(ch)
+# x = opciones()
+
+y.op_0()
+
+y.lista()
+
+# while ch.running:
+#     Menu.start(ch)
 

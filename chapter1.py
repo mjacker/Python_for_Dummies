@@ -17,12 +17,12 @@ any digits after it.
 11) str(x) Converts number x to the string data type.
 12) type(x) Returns a string indicating the data type of x.\n\n\n""")
 
-    number = 0.0
-    try: 
-        number = int(input("\n\nPlease input a negative number: "))
-        print(f"\nusing abs({number}). \n\t The result of this function is: ", abs(number))
-    except:
-        print("Please, try it again.")
+    # number = 0.0
+    # try: 
+    #     number = int(input("\n\nPlease input a negative number: "))
+    #     print(f"\nusing abs({number}). \n\t The result of this function is: ", abs(number))
+    # except:
+    #     print("Please, try it again.")
 
 # Still More Math Functions
 def ch1_2():

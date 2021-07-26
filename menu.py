@@ -4,6 +4,8 @@ from mjresources import choose, clear
 class Menu():
     def __init__(self) -> None:
         self.running = True
+        menu_index = []
+
 
     # Menu principal
     def menu0(self):
