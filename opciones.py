@@ -1,24 +1,33 @@
+from mjresources import choose
+import menu as mn
+
 class Opciones():
     indexA = []
+    running = True
 
-    def op_0(self):
-        print("""
-        1) ENGLISH.
-        2) ESPAÑOL.
-        3) 中文.
-        4) EXIT.""")
+    def check(self):
+        if len(self.indexA) == 0:
+            mn.chapters(self)
+        # elif self.indexA[0] == 0:
+        #     self.running = False # condicion de salida
+        elif self.indexA[-1] == 0:
+            self.indexA.pop()
+            self.indexA.pop()
+        elif self.indexA[0] == 1:
+            mn.menu_CH1(self)
+        elif self.indexA[0] == 2:
+            mn.menu_CH3(self)
+        elif self.indexA[0] == 3:
+            mn.menu_CH3(self)
+        
+
+        self.iprint()
 
 
-    def op_1(self):
-        print("""
-        1) esto es uno
-        2) esto es dos
-        3) esto es tres""")
 
-        self.indexA.append(1)
-        self.indexA.append(3)
-        self.indexA.append(5)
+    def read(self):
+        self.indexA = input("HACIENDO NADA>>")
 
-    def lista(self):
+    def iprint(self):
         print(self.indexA)
 

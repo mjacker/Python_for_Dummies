@@ -1,86 +1,46 @@
 import chapter1
-from mjresources import choose, clear
+from mjresources import choose, clear, choosen
 
-class Menu():
-    def __init__(self) -> None:
-        self.running = True
-        menu_index = []
+def __init__(self) -> None:
+    self.running = True
+    menu_index = []
 
 
-    # Menu principal
-    def menu0(self):
-        print("""
+# Menu principal
+def chapters(self):
+    print("""
 Welcome to Python for Dummies...
 --------------------------------------
-    1) Chapter 1 - Working with Numbers, Text, and Dates.
-    0) Exit.""")
+1) Chapter 1 - Getting Started with Python.
+2) Chapter 2 - Understanding Python Building Blocks.
+3) Chapter 3 - Working with Python Libraries
+0) Exit.""")
+    self.indexA.append(choosen(0, 3))
+
+def menu_CH1(self):
+    print("""
+1) Tipos de datos.
+2) Cualquier batata.
+0) Back.""")
+    self.indexA.append(choosen(0, 2))
 
 
-    # Menu 1
-    def menu1(self):
-        print("""
-    1) Some Built-In Python Functions for Numbers
-    2) Math Module.
-    3) Formatting Numbers
-    4) Formatting perfecnt numbers
-    5) Making multiline format strings
-    6) Formatting width and alignment
-    9) Concatenating strings
-    0) Back.""")
+def menu_CH2(self):
+    print("""
+1) Some Built-In Python Functions for Numbers
+2) Math Module.
+3) Formatting Numbers
+4) Formatting perfecnt numbers
+5) Making multiline format strings
+6) Formatting width and alignment
+9) Concatenating strings
+0) Back.""")
+    self.indexA.append(choosen(0, 9))
 
 
-    def choose1(self, op1):
-        try:
-            # op1 = self.menu1()
-            clear()
-            if op1 == 1:
-                chapter1.ch1_1()
-            elif op1 == 2:
-                chapter1.ch1_2()
-            elif op1 == 3:
-                chapter1.ch1_3()
-            elif op1 == 4:
-                chapter1.ch1_4()
-            elif op1 == 5:
-                chapter1.ch1_5()
-            elif op1 == 6:
-                chapter1.ch1_6()
-            elif op1 == 9:
-                chapter1.ch1_9()
-            elif op1 == 0:
-                return 0
-
-            input("\n\n\tpress any key to go back...")
-
-            self.choose1(self.menu1())
-        except:
-            print("error1_1")
-
-    def choose_reset(self):
-        pass
-
-    def start(self):
-        self.menu0()
-        op = choose(1)
-
-        if op == 1 :
-            self.menu1()
-            op2 = choose(6)
-            if op2 == 1:
-                chapter1.ch1_1()
-            elif op2 == 2:
-                chapter1.ch1_2()
-            elif op2 == 3:
-                chapter1.ch1_3()
-            elif op2 == 4:
-                chapter1.ch1_4()
-            elif op2 == 5:
-                chapter1.ch1_5()
-            elif op2 == 6:
-                chapter1.ch1_6()
-            elif op2 == 9:
-                chapter1.ch1_9()
-        elif op == 0:
-            print("Saliendo del programa")
-            self.running = False
-            
+def menu_CH3(self):
+    print("""
+1) Working with External Files
+2) Juggling JSON Data.
+0) Back.""")
+    self.indexA.append(choosen(0, 2))

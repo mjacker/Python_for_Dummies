@@ -32,3 +32,15 @@ def choose(N) -> int: # Recibe una elección de cualquien menú con opciones num
             print("ERROR!")
             continue
     return eleccion
+
+def choosen(N, M) -> int: # Recibe una elección de cualquien menú con opciones numericas (parametro: número de opciones)
+    while True: # Fuerza que la entrada esté entre las opciones
+        try: # Fuerza que la entrada se un número entero
+            eleccion = int(input(">> ")) # Toma la entrada
+            if eleccion in range(N, M + 1): # Verifica que la entrada esté en el rango de opciones
+                break
+            else: print("Intente nuevamente...")
+        except (ValueError):
+            print("ERROR!")
+            continue
+    return eleccion
