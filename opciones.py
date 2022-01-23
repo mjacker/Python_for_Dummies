@@ -1,28 +1,33 @@
 from mjresources import choose, clear, choosen
 import menu as mn
-import chapter1 as CH1
-import chapter2 as CH2
+from Book2 import BK2chapter1 as CH1
+from Book2 import Bk2chapter2 as CH2
+from Book2 import BK2chapter3 as CH3
 
 class Opciones():
     running = True
 
-
     def opin(self):
+        # root menu
         mn.chapters()
-        op = choosen(0,4)
+        op = choosen(0,3)
+
+        # termination program condition.
         if op == 0:
             self.running = False
+
+        # refer to chapter numbers
         elif op == 1:
             mn.menu_CH1()
-            op1 = mn.choosen(0,2)
+            op1 = mn.choosen(0,1)
             while op1 != 0:
-                if op1 == 0:
-                    pass
-                elif op1 == 1:
+                if op1 == 1:
                     CH1._1()
-                input("Presiona una tecla para continuar...")
-                mn.menu_CH1()
-                op1 = choosen(0,10)
+                    input("Presiona una tecla para continuar...")
+                    mn.menu_CH1()
+                    op1 = choosen(0,10)
+                elif op1 == 0:
+                    pass
         elif op == 2:
             mn.menu_CH2()     
             op2 = choosen(0,10)
@@ -52,5 +57,15 @@ class Opciones():
                 op2 = choosen(0,10)
         elif op == 3:
             mn.menu_CH3()
-
+            op3 = choosen(0,2)
+            while op3 != 0: 
+                if op3 == 0:
+                    pass
+                elif op3 == 1:
+                    CH3._1()
+                elif op3 == 2:
+                    CH3._2()
+                input("Presiona una tecla para continuar...")
+                mn.menu_CH3()
+                op3 = choosen(0,2)
 

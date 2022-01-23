@@ -1,7 +1,7 @@
 import menu as mn
 def _1():
     mn.square("Integers:")
-    print("""
+    mn.box("""
     Any valid number that does not contain a decimal point.
     For example:""")
     example = """

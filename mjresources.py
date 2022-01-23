@@ -1,6 +1,3 @@
-
-
-
 # import only system from os
 from os import system, name
 
