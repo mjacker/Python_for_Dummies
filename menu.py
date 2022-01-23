@@ -14,6 +14,7 @@ Welcome to Python for Dummies...
 
 
 def menu_CH1():
+    clear()
     print("""
 1) Python Data Types.
 0) Back.""")
