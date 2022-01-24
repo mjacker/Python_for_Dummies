@@ -28,16 +28,7 @@ class MyString():
 ObjMyString = MyString()
 
 def mjstrings():
-    mjrunning = True
-    while mjrunning:
-        mn.clear()
-        print("### Welcome to MJPython ###")
-        print("Please choose the topic that you want to practice.")
-        print("1) String.")
-        print("0) Exit.")
-        choise = input(">> ")
 
-        if choise == "1":
             # String topic
             while True:
                 # Print string interface
@@ -77,7 +68,3 @@ def mjstrings():
                 elif stringchoise == "0":
                     break
 
-        elif choise == "0":
-            mjrunning = False
-        else:
-            print("Invalid option, please try it again.")
