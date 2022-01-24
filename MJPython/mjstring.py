@@ -47,6 +47,8 @@ def mjstrings():
                 print("   1) Print len()")
                 print("   2) Get a char from string. myArray[n].")
                 print("   3) Reverse.")
+                print("   4) upper()")
+                print("   5) lower()")
                 print("   0) Back.")
                 stringchoise = input(">> ")
 
@@ -62,8 +64,15 @@ def mjstrings():
                         ObjMyString.setOuput("The char in the position " + str(nposition) + " is \"" + ObjMyString.getString()[nposition] + "\"")
                     else:
                         ObjMyString.setOuput("The value of n you enter is ouf of range.")
+                # reversed string
                 elif stringchoise == "3":
                     ObjMyString.setString(ObjMyString.getString()[::-1])
+                # upper()
+                elif stringchoise == "4":
+                    ObjMyString.setString(ObjMyString.getString().upper())
+                # lower()
+                elif stringchoise == "5":
+                    ObjMyString.setString(ObjMyString.getString().lower())
                 # exit from string
                 elif stringchoise == "0":
                     break
